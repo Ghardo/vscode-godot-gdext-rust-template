@@ -1,0 +1,48 @@
+// ext install 1YiB.rust-bundle
+// ext install vadimcn.vscode-lldb
+// ext install actboy168.tasks
+// ext install augustocdias.tasks-shell-input
+// ext install IgorSbitnev.error-gutters
+{
+  "gdext.path": "D:/Godot4/gdext",
+  "godot.src": "D:/Godot4/godot",
+  "errorLens.excludePatterns": ["**/.vscode/*.json"],
+  "errorLens.toggleWarning": false,
+  "errorLens.toggleInfo": false,
+  "rust-analyzer.enable": true,
+  "rust-analyzer.checkOnSave.enable": true,
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.cargo-watch.enable": true,
+  "rust-analyzer.proc-macro.enable": true,
+  "rust-analyzer.inlayHints.chainingHints": true,
+  "rust-analyzer.inlayHints.parameterHints": true,
+  "rust-analyzer.diagnostics.disabled": ["unresolved-import"],
+  "rust-analyzer.hints.onlyForWorkspaceMembers": true,
+  "rust-analyzer.analysis.updateOnStartup": true,
+  "rust-analyzer.hoverActions.enable": true,
+  "rust-analyzer.hoverActions.gotoType": true,
+  "rust-analyzer.hoverActions.gotoDefinition": true,
+  "rust-analyzer.inlayHints.enable": true,
+  "rust-analyzer.inlayHints.typeHints": true,
+  "rust-analyzer.cargo.runBuildScripts": "on-demand",
+  "rust-analyzer.cargo.allFeatures": true,
+  "rust-analyzer.cargo.allTargets": true,
+  "rust-analyzer.linkedProjects": ["Cargo.toml"],
+  "workbench.colorCustomizations": {
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#3b009c",
+    "titleBar.activeBackground": "#280069",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#28006999",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "editorWhitespace.foreground": "#ffffff10"
+  },
+  "peacock.color": "#280069",
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "editor.snippetSuggestions": "top",
+  "editor.wordBasedSuggestions": "off",
+  "editor.tabCompletion": "on",
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120]
+}

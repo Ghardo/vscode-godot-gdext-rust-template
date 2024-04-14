@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "rust/my_lib"
+		},
+		{
+			"path": "godot"
+		}
+	],
+	"settings": {
+		"godotTools.editorPath.godot4": "d:/Godot4/IDE/Godot_v4.2.1-stable_win64/Godot_v4.2.1-stable_win64.exe"
+	}
+}

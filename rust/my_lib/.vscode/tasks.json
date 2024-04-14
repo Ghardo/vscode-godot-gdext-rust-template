@@ -1,0 +1,174 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cargo",
+            "command": "build",
+            "args": [
+                "--profile",
+                "dev"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "label" : "$(rocket) build dev",
+                    "color" : "#47ff9a"
+                },
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "rust: cargo build dev",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "type": "cargo",
+            "command": "build",
+            "args": [
+                "--profile",
+                "${input:select-profile}"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "label" : "$(rocket) build profile",
+                    "color" : "#47afff"
+                },
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "rust: cargo build profile",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "type": "cargo",
+            "command": "build",
+            "args": [
+                "--profile",
+                "${input:profile}"
+            ],
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "label" : "$(rocket) build",
+                    "color" : "#47eaff"
+                },
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "label": "rust: cargo build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "type": "cargo",
+            "command": "clean",
+            "problemMatcher": [
+                "$rustc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "statusbar": {
+                    "label" : "$(trash) clean",
+                    "color" : "#ff4747"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "label": "rust: cargo clean",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "godot: edit",
+            "type": "shell",
+            "command": "${config:godotTools.editorPath.godot4}",
+            "args": [
+                "-e",
+                "--path",
+                "${workspaceFolder}/../../godot"
+            ],
+            "options": {
+                "statusbar": {
+                    "label" : "$(edit) edit",
+                    "color" : "#ffa602"
+                }
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "godot: edit",
+            "type": "shell",
+            "command": "${config:godotTools.editorPath.godot4_console}",
+            "args": [
+                "-e",
+                "--path",
+                "${workspaceFolder}/../../godot"
+            ],
+            "options": {
+                "statusbar": {
+                    "label" : "$(edit) edit",
+                    "color" : "#e1ff00"
+                }
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "profile",
+            "description": "Enter the name of the profile u want to build",
+            "default": "dev",
+            "type": "promptString"
+        },
+
+        {
+            "id": "select-profile",
+            "type": "command",
+            "command": "shellCommand.execute",
+            "args": {
+                "command": "echo dev && echo release",
+                "description": "Select a profile"
+
+            }
+        },
+        {
+            "id": "newLib",
+            "description": "Enter name of the new Lib",
+            "default": "",
+            "type": "promptString"
+        }
+    ]
+}

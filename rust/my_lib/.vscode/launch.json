@@ -1,0 +1,124 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "launch lldb",
+      "stopAtEntry": false,
+      "args": [
+        "--path", 
+        "${workspaceFolder}/../../godot"
+      ],
+      "symbolSearchPath": "${workspaceFolder}/target/debug;${config:gdext.path}/target/debug",
+      "cwd": "${workspaceFolder}",
+      "program": "${config:godotTools.editorPath.godot4}",
+      "presentation": {
+        "group": "lldb",
+        "order": 1
+      }
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "launch lldb (scene)",
+      "stopAtEntry": false,
+      "args": [
+        "--path", 
+        "${workspaceFolder}/../../godot",
+        "${input:scene}.tscn"
+      ],
+      "symbolSearchPath": "${workspaceFolder}/target/debug;${config:gdext.path}/target/debug",
+      "cwd": "${workspaceFolder}",
+      "program": "${config:godotTools.editorPath.godot4}",
+      "presentation": {
+        "group": "lldb",
+        "order": 2
+      }
+    },
+    {
+      "name": "attach lldb",
+      "pid": "${command:pickProcess}",
+      "type": "lldb",
+      "request": "attach",
+      "program": "${config:godotTools.editorPath.godot4}",
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "port": 6007,
+      "presentation": {
+        "group": "lldb",
+        "order": 3
+      }
+    },
+    {
+      "name": "launch cppvsdbg",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "windows": {
+        "program": "${config:godotTools.editorPath.godot4}"
+      },
+      "args": [
+        "--path", 
+        "${workspaceFolder}/../../godot"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "symbolSearchPath": "${workspaceFolder}/target/debug;${config:gdext.path}/target/debug",
+      "visualizerFile": "${config:godot.src}/platform/windows/godot.natvis",
+      "presentation": {
+        "group": "cppvsdbg",
+        "order": 1
+      }
+    },
+    {
+      "name": "launch cppvsdbg (scene)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "windows": {
+        "program": "${config:godotTools.editorPath.godot4}"
+      },
+      "args": [
+        "--path", 
+        "${workspaceFolder}/../../godot",
+        "${input:scene}.tscn"
+      ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "symbolSearchPath": "${workspaceFolder}/target/debug;${config:gdext.path}/target/debug",
+      "visualizerFile": "${config:godot.src}/platform/windows/godot.natvis",
+      "presentation": {
+        "group": "cppvsdbg",
+        "order": 2
+      }
+    },
+    {
+      "name": "attach cppvsdbg",
+      "type": "cppvsdbg",
+      "request": "attach",
+      "processId": "${command:pickProcess}",
+      "symbolSearchPath": "${config:godot.src}/platform/windows",
+      "visualizerFile": "${config:godot.src}/platform/windows/godot.natvis",
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}/rust",
+      "presentation": {
+        "group": "cppvsdbg",
+        "order": 3
+      }
+    }
+  ],
+  "inputs": [
+    {
+        "id": "scene",
+        "type": "command",
+        "command": "shellCommand.execute",
+        "args": {
+            "command": "for %i in (${workspaceFolder}/../../godot/*.tscn) do @echo %~ni",
+            "description": "Select a scene"
+
+        }
+    }
+]
+}
