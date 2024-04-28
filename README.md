@@ -1,3 +1,4 @@
+This is just my vscode template for setup new godoto projects
 
 ## install vscode extensions
 
