@@ -28,6 +28,9 @@ checkout gdext and godot sources and set the paths in the *.vscode/settings.json
   "godotTools.editorPath.godot4": "d:/Godot4/IDE/Godot_v4.2.1-stable_win64/Godot_v4.2.1-stable_win64.exe",
   "godotTools.editorPath.godot4_console": "d:/Godot4/IDE/Godot_v4.2.1-stable_win64/Godot_v4.2.1-stable_win64_console.exe"
 }
+
+*godotTools.editorPath.godot4* for the first *Edit* button
+*godotTools.editorPath.godot4_console* for the second *Edit* button (windows only? use the same paths for linux or remove it)
 ```
 
 > [!NOTE]
