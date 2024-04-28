@@ -2,6 +2,8 @@ This is just my vscode template for setup new godot projects
 
 ## install vscode extensions
 
+The following extensions are partly needed to add some action buttons to the status bar for compiling, cleaning and opening project in Godot.
+
 ```
 ext install 1YiB.rust-bundle
 ext install vadimcn.vscode-lldb
