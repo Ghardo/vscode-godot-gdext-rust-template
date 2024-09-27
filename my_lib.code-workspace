@@ -8,6 +8,27 @@
 		}
 	],
 	"settings": {
-		"godotTools.editorPath.godot4": "d:/Godot4/IDE/Godot_v4.2.1-stable_win64/Godot_v4.2.1-stable_win64.exe"
+		"errorLens.excludePatterns": [
+			"**/.vscode/*.json"
+		],
+		"rust-analyzer.diagnostics.disabled": [
+			"unresolved-import"
+		],
+		"rust-analyzer.linkedProjects": [
+			"Cargo.toml"
+		],
+		"workbench.colorCustomizations": {
+			"commandCenter.border": "#e7e7e799",
+			"sash.hoverBorder": "#ff6433",
+			"titleBar.activeBackground": "#ff3d00",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#ff3d0099",
+			"titleBar.inactiveForeground": "#e7e7e799",
+			"editorWhitespace.foreground": "#ffffff10"
+		},
+		"peacock.color": "#ff3d00",
+		"dotnetAcquisitionExtension.enableTelemetry": false,
+		"godotTools.editorPath.godot4": "d:/Godot4/IDE/Godot_v4.3-stable_win64/Godot_v4.3-stable_win64.exe",
+		"godotTools.editorPath.godot4_console": "d:/Godot4/IDE/Godot_v4.3-stable_win64/Godot_v4.3-stable_win64_console.exe",
 	}
 }
